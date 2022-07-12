@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="centered-div">
+        <div class="game-div" id="num-box"></div>
+    </div>
+        <div class="centered-div">
+            <span>Range of numbers(inclusive):</span>
+            <input id="lower-bound"> 
+            <span>to</span>
+            <input id="upper-bound">
+        </div>
+        <div class="centered-div">
+            <span>Time (seconds) between numbers:</span>
+            <input id="time-between-numbers">
+        </div>
+        <div class="centered-div">
+            <spam>Time (seconds) the game should last:</spam>
+            <input id="game-time">
+        </div>
+        <div class="centered-div">
+            <button id="start-button">Begin</button>
+            <button id="stop-button">Stop</button>
+        </div>
+        <br>
+        <br>
+        <div style="text-align: center; justify-content: center; display: none;" id="final-sum">
+            <span> Sum: </span> <input id="sum-input"> <button id="sum-button">Submit</button> <span style="display:none" id="game-result"></span>
+        </div>
+
+
+</body>
+<script src="script.js"></script>
+</html>

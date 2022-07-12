@@ -1,0 +1,26 @@
+
+.game-div {
+    display: flex;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+    border: 10px solid black;   
+    text-align: center;
+    font-size: 300px;
+}
+
+.centered-div {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.sum-centered-div {
+    text-align: center;
+    justify-content: center;
+    display: none;
+}
