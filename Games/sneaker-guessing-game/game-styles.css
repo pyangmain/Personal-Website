@@ -1,8 +1,8 @@
-/* StockX font import*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap');
+/*font imports*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Quicksand:wght@500&display=swap');
 /* StockX Green color: Hex#256241*/
 *, *::before, *::after, h1{
-    font-family: 'Montserrat Alternatives', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
     box-sizing: border-box;
 }
 h1 {
@@ -21,6 +21,35 @@ h1 {
     position: fixed;
     bottom: 0;
     width: 100%;
+} 
+.fixed-green-button {
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px;   
+    border-style:none;
+    background-color: white;
+    color: #3e9754;
+    border: 3px solid #3e9754;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    transition-duration: .4s; 
+    border-radius: 8px;
+}
+.fixed-green-button:hover {
+    background-color: #3e9754;
+    color: white;
+    transform: 150ms;
+    transform: scale(1.03);
+    cursor: pointer;    
+}
+
+.fixed-green-button:focus{
+    outline: none;
 }
 .level-counter {
     left: 0
