@@ -53,12 +53,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <img src="images/Industry_Photo.jpg" onmouseover="this.src='images/gamerglasses.jpg'" onmouseout="this.src='images/Industry_Photo.jpg'" class="mx-auto d-block" style="margin:auto; border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:1.6cm;margin-top:2.6cm;" width="50%">
+                    <img src="images/personal_pic_24.jpeg" onmouseover="this.src='images/gamerglasses.jpg'" onmouseout="this.src='images/personal_pic_24.jpeg'" class="mx-auto d-block" style="margin:auto; border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:1.6cm;margin-top:2.6cm;" width="50%">
                 </div>
                 <div class="col-sm-4">  
                     <div>
                         <h2 class="jumbotron-heading" style="text-align:center;color: black;">Peter Yang</h2>
-                        <p class="lead text-muted" style="text-align:center">Math/CS/Stats @ University of Michigan</p>
+                        <p class="lead text-muted" style="text-align:center">Math/CS/Stats/DataSci @ University of Michigan</p>
                         <div style="display:flex;justify-content:center;align-items:flex-end;">
                             <a href="files/cv.pdf" target="_blank">
                                 <button type="button" class="btn btn-outline-primary btn-lg">CV </button>
@@ -81,7 +81,8 @@
                   <a id="about" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
                   <h1>About Me</h1>
                   <p>
-                      I am currently a senior at the University of Michigan, majoring in Honors Mathematics, Statistics, Computer Science, Data Science. Last Summer I did an internship at MathWorks on the Data Science Types Team.
+                      I am currently a senior at the University of Michigan, majoring in Honors Mathematics, Statistics, Computer Science, Data Science. I spent the last two summers working at MathWorks as a SWE Intern, the first time on the Data Science Types Team, and the second on the App Designer and Infrastructure Services Team.
+                      <br> <br>
                       Previously, I spent my first year of my undergraduate degree at the University of Wisconsin-Madison, after which I transferred. I am a Boston native, originally from a town called Wellesley (Maybe you have heard of Wellesley College?)
                   </p>
               </div>
@@ -142,7 +143,7 @@
                     <li class="media">
                         <a href="https://www.mathworks.com/" target="_blank"><img src="images/Matlab_Logo.png" class="mr-3" alt="..." width="84"></a>
                       <div class="media-body">
-                          <h5 class="mt-0 mb-1">Data Engineer Intern @ Mathworks</h5>
+                          <h5 class="mt-0 mb-1">Software Engineer Intern @ Mathworks</h5>
                           <p class="badge badge-primary">May 2023 - Aug 2023</p>
                           <p>Data Science Types Team</p>
                       </div>
@@ -202,6 +203,21 @@
                 <a id="projects" style=" position: relative;top: -60px;display: block;height: 0;overflow: hidden;"></a>
                 <h1>Projects</h1>
                  <div class="row row-cols-1 row-cols-md-3">
+                    <div class="col mb-4">
+                        <div class="card h-100">
+                            <img src="images/translate-subtitles.webp" class="card-img-top" alt="..."> 
+                            <div class="card-body">
+                                <h5 class="card-title">AI Video Subtitle Translation</h5>
+                                <p class="card-text">Created a program in Python leveraging the OpenAI Whisper API to translate and generate multi-language
+                                    subtitles for videos. Built backend using FastAPI for deployment, optimizing for low-latency API responses. Utilized MoviePy and FFmpeg libraries to handle audio extraction and embedding translated subtitles
+                                    </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="https://github.com/pyangmain" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">Code</button></a>
+                                  </div>
+                            </div>
+                        </div>
+                     </div>
+
                      <div class="col mb-4">
                         <div class="card h-100">
                             <img src="images/sneaker-guessing-game.jpg" class="card-img-top" alt="..."> 
@@ -216,18 +232,7 @@
                             </div>
                         </div>
                      </div>
-                     <div class="col mb-4">
-                        <div class="card h-100">
-                            <img src="images/black-scholes-project-pic.png" class="card-img-top" alt="..."> 
-                            <div class="card-body">
-                                <h5 class="card-title">Black-Scholes Options Pricer/Tool</h5>
-                                <p class="card-text">This Python program computes the theoretical price of an options contract using the Black-Scholes model. Used BeautifulSoup to scrape real-time risk free rates and historical volatility. Used the TDAmeritrade API to log real time bid/ask spreads and last trade price data to the terminal.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <a href="https://github.com/pyangmain/black-scholes-pricing" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary">Code</button></a>
-                                  </div>
-                            </div>
-                        </div>
-                     </div>
+                     
                      <div class="col mb-4">
                         <div class="card h-100">
                             <img src="images/morphnet.png" class="card-img-top" alt="..."> 
@@ -259,9 +264,10 @@
                             <img src="images/github_logo_transparent.png" height="30" width="30">
                         </a>
                         &nbsp
-                        <a href="https://www.linkedin.com/in/peter-yang-a373a51b9/" target="_blank">
+                        <a href="https://www.linkedin.com/in/yangpe/" target="_blank">
                             <img src="images/LinkedIn_logo_initials.png" height="30" width="30">
                         </a>
+                        
                     </div>
                     <br>
                     <div style="text-align:center;">Built by Peter Yang with Bootstrap</div>
