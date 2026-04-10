@@ -364,6 +364,7 @@
 
       let shuffledPeterPics = [];
       let currentPeterPicIndex = 0;
+      const preloadedPeterPics = [];
 
       function shufflePeterPics() {
         shuffledPeterPics = [...peterPics];
@@ -376,6 +377,16 @@
         }
       }
 
+      function preloadPeterPics() {
+        preloadedPeterPics.length = 0;
+
+        for (const fileName of peterPics) {
+          const image = new Image();
+          image.src = "images/peter pics/" + fileName;
+          preloadedPeterPics.push(image);
+        }
+      }
+
       function setRandomPeterPhoto(imageElement) {
         if (shuffledPeterPics.length === 0) {
           shufflePeterPics();
@@ -385,6 +396,7 @@
         currentPeterPicIndex = (currentPeterPicIndex + 1) % shuffledPeterPics.length;
       }
 
+      preloadPeterPics();
       shufflePeterPics();
     </script>
   </body>
