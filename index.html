@@ -56,7 +56,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-sm-6">
-                    <img src="images/personal_pic_24.jpg" onmouseover="this.src='images/gamerglasses.jpg'" onmouseout="this.src='images/personal_pic_24.jpg'" class="mx-auto d-block" style="margin:auto; border-radius: 50%;align-items: center;justify-content: center;overflow: hidden;margin-bottom:1.6cm;margin-top:2.6cm;" width="50%">
+                    <img src="images/personal_pic_24.jpg" onmouseover="setRandomPeterPhoto(this)" onmouseout="this.src='images/personal_pic_24.jpg'" class="mx-auto d-block" style="margin:auto; border-radius: 50%; align-items: center; justify-content: center; overflow: hidden; margin-bottom:1.6cm; margin-top:2.6cm; width: 320px; height: 320px; max-width: 100%; object-fit: cover;">
                 </div>
                 <div class="col-sm-4">  
                     <div>
@@ -288,5 +288,104 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      const peterPics = [
+        "5fadf6bc7e0f996e55b33378a8445cfa.JPG",
+        "5fd2daac5d466e463b4f4f7a8a629f36.JPG",
+        "65077437794__FAF92700-4FA0-44B1-AF93-E74152D77CD7.jpeg",
+        "79395718572__585A9061-3CC8-4BA0-94C4-7A4652714674.jpg",
+        "cdd87f11fd44234cbaefa4bdf1c0e365.JPG",
+        "E0C77854-9806-4B6E-84FD-9FB0EBA10AD5.JPG",
+        "gamerglasses.jpg",
+        "image.PNG",
+        "image000001.JPG",
+        "IMG_0016.jpeg",
+        "IMG_0044.JPG",
+        "IMG_0352.jpeg",
+        "IMG_0456.jpeg",
+        "IMG_0457.jpeg",
+        "IMG_0684.JPG",
+        "IMG_0827.jpeg",
+        "IMG_1022.jpeg",
+        "IMG_1104.jpeg",
+        "IMG_1194.jpg",
+        "IMG_1409.jpeg",
+        "IMG_1441.jpeg",
+        "IMG_1625.jpeg",
+        "IMG_1659.JPG",
+        "IMG_1684.JPG",
+        "IMG_1699.jpeg",
+        "IMG_1711.jpeg",
+        "IMG_1736.jpeg",
+        "IMG_1737.JPG",
+        "IMG_1824.JPG",
+        "IMG_20240713_113526_459.JPG",
+        "IMG_2064.jpeg",
+        "IMG_2109.JPG",
+        "IMG_2250.jpeg",
+        "IMG_2273.jpeg",
+        "IMG_2335.jpeg",
+        "IMG_2367.jpeg",
+        "IMG_2462.jpeg",
+        "IMG_2578.jpeg",
+        "IMG_2632.jpeg",
+        "IMG_2847.jpeg",
+        "IMG_2964.jpeg",
+        "IMG_2984.jpeg",
+        "IMG_3014.jpeg",
+        "IMG_3072.jpeg",
+        "IMG_3270.jpeg",
+        "IMG_3310.jpeg",
+        "IMG_3378.jpeg",
+        "IMG_3472.jpg",
+        "IMG_3548.jpg",
+        "IMG_3639.jpg",
+        "IMG_3741.jpg",
+        "IMG_3915.jpg",
+        "IMG_3935.jpg",
+        "IMG_3969.jpg",
+        "IMG_4006.jpg",
+        "IMG_4045.JPG",
+        "IMG_4116.jpg",
+        "IMG_4214.jpg",
+        "IMG_4257.jpg",
+        "IMG_4325.jpg",
+        "IMG_4359.jpg",
+        "IMG_4372.JPG",
+        "IMG_4753.JPG",
+        "IMG_4929.jpeg",
+        "IMG_7593.jpeg",
+        "IMG_7719.jpeg",
+        "IMG_7725.jpeg",
+        "IMG_7841.JPG",
+        "IMG_8747.jpg",
+        "PXL_20220115_191024269.MP.JPG"
+      ];
+
+      let shuffledPeterPics = [];
+      let currentPeterPicIndex = 0;
+
+      function shufflePeterPics() {
+        shuffledPeterPics = [...peterPics];
+
+        for (let i = shuffledPeterPics.length - 1; i > 0; i--) {
+          const randomIndex = Math.floor(Math.random() * (i + 1));
+          const temp = shuffledPeterPics[i];
+          shuffledPeterPics[i] = shuffledPeterPics[randomIndex];
+          shuffledPeterPics[randomIndex] = temp;
+        }
+      }
+
+      function setRandomPeterPhoto(imageElement) {
+        if (shuffledPeterPics.length === 0) {
+          shufflePeterPics();
+        }
+
+        imageElement.src = "images/peter pics/" + shuffledPeterPics[currentPeterPicIndex];
+        currentPeterPicIndex = (currentPeterPicIndex + 1) % shuffledPeterPics.length;
+      }
+
+      shufflePeterPics();
+    </script>
   </body>
 </html>
